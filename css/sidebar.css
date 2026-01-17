@@ -46,3 +46,28 @@
   color: #333333;
   text-decoration: none;
 }
+
+@media (min-width: 768px) {
+  .sidebar_hamburger {
+    display: none;
+  }
+
+  .sidebar_content {
+    transform: translateX(0);
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sidebar_list {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .sidebar_list > li {
+    margin-bottom: 0;
+  }
+}

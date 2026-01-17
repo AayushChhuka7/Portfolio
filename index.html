@@ -183,8 +183,15 @@
 
     <script>
       const hamburger = document.querySelector("#hamburger");
+      const sidebarLinks = document.querySelectorAll(".sidebar_list a");
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("sidebar_hamburger_translate");
+      });
+
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("sidebar_hamburger_translate");
+        });
       });
     </script>
   </body>
