@@ -29,12 +29,9 @@ li {
   all: unset;
 }
 .section {
-  /* This ensures the section is at least the full height of the browser window */
   min-height: 100vh;
 
-  /* Adding padding so text doesn't hit the screen edges */
   padding: 20px 10%;
 
-  /* Critical for Desktop: Ensure sections don't hide behind your sticky nav */
   scroll-margin-top: var(--nav-height);
 }

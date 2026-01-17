@@ -186,11 +186,18 @@
       const sidebarLinks = document.querySelectorAll(".sidebar_list a");
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("sidebar_hamburger_translate");
+        if (hamburger.classList.contains("fa-bars")) {
+          hamburger.classList.replace("fa-bars", "fa-xmark");
+        } else {
+          hamburger.classList.replace("fa-xmark", "fa-bars");
+        }
       });
 
       sidebarLinks.forEach((link) => {
         link.addEventListener("click", () => {
           hamburger.classList.remove("sidebar_hamburger_translate");
+          hamburger.classList.remove("fa-xmark");
+          hamburger.classList.add("fa-bars");
         });
       });
     </script>
