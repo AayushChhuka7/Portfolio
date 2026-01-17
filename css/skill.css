@@ -1,0 +1,38 @@
+.skill {
+  margin-bottom: 20px;
+}
+.skill > p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+.skill_bg_box {
+  width: 100%;
+
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+.skill_percent_box {
+  height: 6px;
+  background-color: #2c98f0;
+  border-radius: 8px;
+  width: 80%;
+  color: #2c98f0;
+  position: relative;
+}
+.skill_percent_box > span {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .all_skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

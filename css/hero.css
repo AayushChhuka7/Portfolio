@@ -1,0 +1,51 @@
+#hero {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 30px;
+  background-color: #efe7e6;
+  background-image: url("../Images/hero.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#hero > h1 {
+  font-size: 28px;
+
+  line-height: 1.3;
+  /* betn two line  */
+
+  letter-spacing: 5px;
+  font-weight: 700;
+  font-family: "Playfair Display";
+}
+#hero > p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 300;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#hero > button {
+  width: 300px;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#hero > button > span {
+  font-weight: normal;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#hero > button > i {
+  font-size: 20px;
+}
