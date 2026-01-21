@@ -26,8 +26,8 @@
   line-height: 1.5;
   margin-bottom: 30px;
 }
-#hero > button {
-  width: 300px;
+#hero > a > button {
+  width: 200px;
   background-color: transparent;
   padding: 10px 15px;
   border: 1px solid black;
@@ -36,7 +36,41 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  animation: shake 0.15s infinite;
+  cursor: pointer;
 }
+/* #hero > button {
+  width: 200px;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: shake 0.15s infinite;
+  cursor: pointer;
+} */
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  40% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  60% {
+    transform: translate(-2px, 2px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
 #hero > button > span {
   font-weight: normal;
 
