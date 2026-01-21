@@ -4,12 +4,13 @@
 
 html {
   scroll-behavior: smooth;
-  --nav-height: 80px;
 }
 
 body {
   font-family: "Quicksand", sans-serif;
   margin: unset;
+
+  background-color: #cbccce;
 }
 
 a {
@@ -28,10 +29,14 @@ ul,
 li {
   all: unset;
 }
+
 .section {
   min-height: 100vh;
 
   padding: 20px 10%;
-
-  scroll-margin-top: var(--nav-height);
+}
+@media screen and (min-width: 768px) {
+  main {
+    border-left: 10px solid white;
+  }
 }
