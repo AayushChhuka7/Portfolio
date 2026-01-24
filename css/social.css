@@ -1,0 +1,56 @@
+:root {
+  --circle-size: 350px;
+  --gap: 10px;
+  --bg-color: burlywood;
+}
+#social {
+}
+.social_container {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-circle {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  gap: var(--gap);
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  text-decoration: none;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.instagram {
+  border-radius: 100% 0 0 0;
+}
+.twitter {
+  border-radius: 0 100% 0 0;
+}
+.github {
+  border-radius: 0 0 0 100%;
+}
+.discord {
+  border-radius: 0 0 100% 0;
+}
+
+.social-item:hover {
+  background-color: #444;
+  color: white;
+  transform: scale(1.02);
+}

@@ -115,8 +115,6 @@ nav {
   .sidebar_content {
     transform: translateX(0);
     left: var(--nav-positioon-from-left);
-
-    background-color: #f0f4f7;
   }
   .sidebar_list > li > a {
     font-size: 14px;
@@ -131,6 +129,5 @@ nav {
     height: 100vh;
     margin-left: 450px;
     background-color: transparent;
-    border-left: var(--gap-size) solid white;
   }
 }
