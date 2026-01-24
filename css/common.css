@@ -10,6 +10,11 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #999999;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .section_title {
+  color: #666666;
 }
 .section_subtitle {
   /* font-family: "Quicksand", sans-serif; */
@@ -21,6 +26,11 @@
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .section_subtitle {
+  color: #e0e0e0;
 }
 @media screen and (min-width: 768px) {
   .section {

@@ -2,16 +2,31 @@
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.7);
   margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .about_description {
+  color: rgba(224, 224, 224, 0.8);
 }
 .about_skills_box {
   margin-bottom: 50px;
   padding: 24px;
   border-bottom: 2px solid #2c98f0;
+  transition: border-color 0.3s ease;
+}
+
+html.dark-mode .about_skills_box {
+  border-bottom: 2px solid #60a5fa;
 }
 .about_skills_box > i {
   margin-bottom: 20px;
   font-size: 30px;
   color: #2c98f0;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .about_skills_box > i {
+  color: #60a5fa;
 }
 .about_skills_box > h3 {
   font-weight: 500;

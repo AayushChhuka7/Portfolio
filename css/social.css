@@ -147,6 +147,14 @@
   --term-keyword: #4078f2;
 }
 
+html.dark-mode {
+  --term-bg: #2d2d2d;
+  --term-header: #1a1a1a;
+  --term-text: #e0e0e0;
+  --term-prompt: #50d950;
+  --term-keyword: #60a5fa;
+}
+
 .terminal-social {
   max-width: 550px;
   margin: 40px auto;
@@ -169,6 +177,11 @@
   font-size: 13px;
   margin-left: 15px;
   letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .terminal-title {
+  color: #999;
 }
 
 .terminal-body {
@@ -180,6 +193,11 @@
   display: block;
   text-decoration: none;
   transition: transform 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+html.dark-mode .term-link:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .term-link:hover {

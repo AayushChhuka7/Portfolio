@@ -32,6 +32,27 @@
     <link rel="stylesheet" href="css/social.css" />
   </head>
   <body>
+    <button
+      id="theme-toggle"
+      style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        font-size: 20px;
+        transition: all 0.3s ease;
+      "
+      title="Toggle Dark Mode"
+    >
+      <i class="fa-regular fa-moon"></i>
+    </button>
     <nav>
       <i id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
 
@@ -322,6 +343,39 @@
       </section>
     </main>
     <script>
+      
+      const themeToggle = document.querySelector("#theme-toggle");
+      const themeIcon = themeToggle.querySelector("i");
+      const htmlElement = document.documentElement;
+
+      
+      const currentTheme = localStorage.getItem("theme") || "light";
+      if (currentTheme === "dark") {
+        htmlElement.classList.add("dark-mode");
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+        themeToggle.style.backgroundColor = "#2d2d2d";
+        themeToggle.style.color = "#e0e0e0";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark-mode");
+
+        if (htmlElement.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+          themeToggle.style.backgroundColor = "#2d2d2d";
+          themeToggle.style.color = "#e0e0e0";
+        } else {
+          localStorage.setItem("theme", "light");
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+          themeToggle.style.backgroundColor = "#f0f0f0";
+          themeToggle.style.color = "#333";
+        }
+      });
+
       const hamburger = document.querySelector("#hamburger");
       const sidebarLinks = document.querySelectorAll(".sidebar_list a");
       hamburger.addEventListener("click", () => {
