@@ -14,9 +14,13 @@
 }
 
 .social_container {
-  margin-top: 50px;
+  min-height: calc(100vh - 160px);
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 24px;
+  padding: 40px 20px;
 }
 
 .social-circle {
@@ -154,10 +158,19 @@ html.dark-mode {
   --term-prompt: #50d950;
   --term-keyword: #60a5fa;
 }
-
+.social_container {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 20px;
+}
 .terminal-social {
   max-width: 550px;
   margin: 40px auto;
+
   background: var(--term-bg);
   border-radius: 10px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
@@ -170,6 +183,37 @@ html.dark-mode {
   padding: 12px 18px;
   display: flex;
   align-items: center;
+}
+
+.terminal-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) inset;
+}
+.terminal-header .dot.red {
+  background: #ff5f56;
+}
+.terminal-header .dot.yellow {
+  background: #ffbd2e;
+}
+.terminal-header .dot.green {
+  background: #27c93f;
+}
+
+html.dark-mode .terminal-header {
+  background: rgba(26, 26, 26, 0.9);
+}
+html.dark-mode .terminal-header .dot.red {
+  background: #ff6b6b;
+}
+html.dark-mode .terminal-header .dot.yellow {
+  background: #ffd166;
+}
+html.dark-mode .terminal-header .dot.green {
+  background: #34d399;
 }
 
 .terminal-title {
@@ -187,6 +231,36 @@ html.dark-mode .terminal-title {
 .terminal-body {
   padding: 25px;
   line-height: 1.8;
+}
+
+.social_vibe {
+  max-width: 700px;
+  text-align: center;
+  color: var(--term-text);
+  margin: 8px 0 0 0;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+.social_slogan {
+  text-align: center;
+  font-weight: 600;
+  color: var(--term-text);
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px 12px;
+  color: var(--term-text);
+  background: var(--term-header);
+  margin-top: 40px;
+}
+
+html.dark-mode .site-footer {
+  background: rgba(26, 26, 26, 0.95);
+  color: var(--term-text);
 }
 
 .term-link {

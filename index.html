@@ -91,7 +91,7 @@
           I'm Aayush <br />I am a developer
         </h1>
         <p>Computer Engineer at National Engineer</p>
-        <button>
+        <button id="contact-btn" type="button">
           <span>Contact Me</span><i class="fa-regular fa-envelope"></i>
         </button>
       </section>
@@ -247,6 +247,10 @@
         <p class="social_description">
           Feel free to reach out to me for any inquiries in my social accounts.
         </p>
+        <p class="social_vibe">
+          Whether you want to collaborate, ask about a project, or just say hi —
+          my DMs and inbox are open. Share your story, ideas, or a quick hello.
+        </p>
         <div class="social_container">
           <!-- <div class="social-circle">
             <a
@@ -340,15 +344,19 @@
             </div>
           </div>
         </div>
+        <p class="social_slogan">
+          Let's build something awesome — DM or email me.
+        </p>
       </section>
     </main>
+    <footer class="site-footer">
+      <p>Inspired by memes</p>
+    </footer>
     <script>
-      
       const themeToggle = document.querySelector("#theme-toggle");
       const themeIcon = themeToggle.querySelector("i");
       const htmlElement = document.documentElement;
 
-      
       const currentTheme = localStorage.getItem("theme") || "light";
       if (currentTheme === "dark") {
         htmlElement.classList.add("dark-mode");
@@ -394,6 +402,27 @@
           hamburger.classList.add("fa-bars");
         });
       });
+
+      const contactBtn = document.querySelector("#contact-btn");
+      if (contactBtn) {
+        contactBtn.addEventListener("click", (e) => {
+          const to = "aayushchhuka20@gmail.com";
+          const mailto = `mailto:${to}`;
+          try {
+            const opened = window.open(mailto);
+            if (!opened) {
+              window.location.href = mailto;
+            }
+          } catch (err) {
+            const a = document.createElement("a");
+            a.href = mailto;
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
+        });
+      }
     </script>
   </body>
 </html>
