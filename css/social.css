@@ -250,19 +250,6 @@ html.dark-mode .terminal-title {
   font-size: 16px;
 }
 
-.site-footer {
-  text-align: center;
-  padding: 24px 12px;
-  color: var(--term-text);
-  background: var(--term-header);
-  margin-top: 40px;
-}
-
-html.dark-mode .site-footer {
-  background: rgba(26, 26, 26, 0.95);
-  color: var(--term-text);
-}
-
 .term-link {
   display: block;
   text-decoration: none;
